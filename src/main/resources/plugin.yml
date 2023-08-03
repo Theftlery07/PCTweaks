@@ -1,0 +1,5 @@
+name: PCTweaks
+version: '${project.version}'
+main: me.priceconnelly.pctweaks.PCTweaks
+authors: [ PriceConnelly ]
+description: A collection of QOL improvements for running a minecraft server
