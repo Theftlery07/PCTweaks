@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.StringJoiner;
 
-import static me.pricec.myfirstplugin.MyFirstPlugin.getPlugin;
+import static me.priceconnelly.pctweaks.PCTweaks.getPlugin;
 
 public abstract class Rank {
     private static HashMap<String, rank> ranks = initializeRanks();

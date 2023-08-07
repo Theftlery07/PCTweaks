@@ -1,6 +1,6 @@
 package me.priceconnelly.pctweaks.commands;
 
-import me.pricec.myfirstplugin.Stash;
+import me.priceconnelly.pctweaks.models.Stash;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

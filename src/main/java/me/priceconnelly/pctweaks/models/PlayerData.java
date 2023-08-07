@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static me.pricec.myfirstplugin.MyFirstPlugin.getPlugin;
+import static me.priceconnelly.pctweaks.PCTweaks.getPlugin;
 
 public class PlayerData {
     private static HashMap<String, PlayerData> playerDatas;

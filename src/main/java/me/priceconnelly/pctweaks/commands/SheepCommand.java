@@ -1,6 +1,6 @@
 package me.priceconnelly.pctweaks.commands;
 
-import me.pricec.myfirstplugin.Cooldown;
+import me.priceconnelly.pctweaks.models.Cooldown;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -15,8 +15,8 @@ import org.bukkit.util.Vector;
 
 import java.util.Collection;
 
-import static me.pricec.myfirstplugin.MyFirstPlugin.getPlugin;
-import static me.pricec.myfirstplugin.MyFirstPlugin.getWorld;
+import static me.priceconnelly.pctweaks.PCTweaks.getPlugin;
+import static me.priceconnelly.pctweaks.PCTweaks.getWorld;
 
 public class SheepCommand implements CommandExecutor {
     private static final Cooldown cooldown = new Cooldown(60);

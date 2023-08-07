@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
 
-import static me.pricec.myfirstplugin.MyFirstPlugin.getPlugin;
+import static me.priceconnelly.pctweaks.PCTweaks.getPlugin;
 
 public abstract class Break {
     private static HashMap<String, brk> breaks = initializeBreaks();

@@ -1,7 +1,7 @@
 package me.priceconnelly.pctweaks.commands;
 
-import me.pricec.myfirstplugin.Cooldown;
-import me.pricec.myfirstplugin.Request;
+import me.priceconnelly.pctweaks.models.Cooldown;
+import me.priceconnelly.pctweaks.models.Request;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

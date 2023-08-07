@@ -1,6 +1,6 @@
 package me.priceconnelly.pctweaks.listeners;
 
-import me.pricec.myfirstplugin.Rank;
+import me.priceconnelly.pctweaks.models.Rank;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

@@ -1,6 +1,6 @@
 package me.priceconnelly.pctweaks.listeners;
 
-import me.pricec.myfirstplugin.Break;
+import me.priceconnelly.pctweaks.models.Break;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

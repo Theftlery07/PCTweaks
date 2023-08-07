@@ -1,6 +1,6 @@
 package me.priceconnelly.pctweaks.commands;
 
-import me.pricec.myfirstplugin.Request;
+import me.priceconnelly.pctweaks.models.Request;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

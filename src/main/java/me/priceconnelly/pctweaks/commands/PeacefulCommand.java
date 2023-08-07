@@ -1,7 +1,7 @@
 package me.priceconnelly.pctweaks.commands;
 
-import me.pricec.myfirstplugin.PlayerData;
-import me.pricec.myfirstplugin.Rank;
+import me.priceconnelly.pctweaks.models.PlayerData;
+import me.priceconnelly.pctweaks.models.Rank;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -11,7 +11,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Monster;
 import org.bukkit.entity.Player;
 
-import static me.pricec.myfirstplugin.MyFirstPlugin.getPlugin;
+import static me.priceconnelly.pctweaks.PCTweaks.getPlugin;
 
 public class PeacefulCommand implements CommandExecutor {
 

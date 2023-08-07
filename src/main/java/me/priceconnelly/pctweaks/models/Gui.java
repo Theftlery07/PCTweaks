@@ -1,5 +1,6 @@
 package me.priceconnelly.pctweaks.models;
 
+import me.priceconnelly.pctweaks.PCTweaks;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -25,7 +26,7 @@ public abstract class Gui implements Listener{
         this.name = name;
         this.size = size;
         gui = new LinkedList<Inventory>() {{add(Bukkit.createInventory(null, size, name));}};
-        MyFirstPlugin.getPlugin().getServer().getPluginManager().registerEvents(this, MyFirstPlugin.getPlugin());
+        PCTweaks.getPlugin().getServer().getPluginManager().registerEvents(this, PCTweaks.getPlugin());
     }
     public void update(){
         ItemStack[] items = getItems();

@@ -1,6 +1,6 @@
 package me.priceconnelly.pctweaks.commands;
 
-import me.pricec.myfirstplugin.MyFirstPlugin;
+import me.priceconnelly.pctweaks.PCTweaks;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -13,7 +13,7 @@ public class SpawnCommand implements CommandExecutor {
             return true;
         }
         Player player = (Player) sender;
-        player.teleport(MyFirstPlugin.getWorld().getSpawnLocation());
+        player.teleport(PCTweaks.getWorld().getSpawnLocation());
         return true;
     }
 }

@@ -1,6 +1,6 @@
 package me.priceconnelly.pctweaks.listeners;
 
-import me.pricec.myfirstplugin.commands.FreezeCommand;
+import me.priceconnelly.pctweaks.commands.FreezeCommand;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
