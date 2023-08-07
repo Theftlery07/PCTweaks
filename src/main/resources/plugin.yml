@@ -3,3 +3,78 @@ version: '${project.version}'
 main: me.priceconnelly.pctweaks.PCTweaks
 authors: [ PriceConnelly ]
 description: A collection of QOL improvements for running a minecraft server
+commands:
+  request:
+    description: requests the held item
+    usage: /<command>
+    aliases:
+      - req
+  accept:
+    description: accepts a request
+    usage: /<command>
+  acceptAll:
+    description: accepts all pending requests
+    usage: /<command>
+  reject:
+    description: rejects a request
+    usage: /<command>
+  rejectAll:
+    description: rejects all pending requests
+    usage: /<command>
+  pending:
+    description: lists all of the pending requests
+    usage: /<command>
+    aliases:
+      - pen
+  stash:
+    description: stash am I right?
+    usage: /<command>
+  inventorySee:
+    description: lemme have a look
+    usage: /<command>
+    aliases:
+      - invsee
+  home:
+    description: Home is where the heart is
+    usage: /<command>
+  spawn:
+    description: teleports the player to world spawn
+    usage: /<command>
+  freeze:
+    description: freezes all non operator players
+    usage: /<command>
+  rank:
+    description: allows players to manage the ranks they have
+    usage: /<command>
+  sheep:
+    description: sheep
+    usage: /<command>
+  pvp:
+    description: toggles pvp
+    usage: /<command>
+  acceptTP:
+    description: accepts teleport
+    usage: /<command>
+  rejectTP:
+    description: denys teleport
+    usage: /<command>
+  tpa:
+    description: teleport anyone
+    usage: /<command>
+  break:
+    description: Timed server closing
+    usage: /<command>
+  peaceful:
+    description: Peaceful mode for just you
+    usage: /<command>
+  nickname:
+    description: Change the name
+    usage: /<command>
+    aliases:
+      - nick
+  hcf:
+    description: halt catch fire
+    usage: /<command>
+  deaths:
+    description: count how many times you've died
+    usage: /<command>
