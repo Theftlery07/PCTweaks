@@ -2,9 +2,12 @@ package me.priceconnelly.pctweaks;
 
 import me.priceconnelly.pctweaks.commands.*;
 import me.priceconnelly.pctweaks.listeners.*;
+import me.priceconnelly.pctweaks.models.PlayerData;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.io.IOException;
 
 public final class PCTweaks extends JavaPlugin {
     private static PCTweaks plugin;
@@ -75,6 +78,12 @@ public final class PCTweaks extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
         System.out.println("Come Back Soon!!!");
+        // PlayerData
+        try {
+            PlayerData.saveData();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
     public static PCTweaks getPlugin(){
         return plugin;

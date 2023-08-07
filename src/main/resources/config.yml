@@ -3,9 +3,10 @@ default_rank_no_op: Camper, White
 rank_limit: 3
 ranks:
   - Admin, Red, true
-  - Tech, Blue, false
+  - Tech, Blue
   - Magic, Light_Purple, false
   - Cool, Gold, false, true
-  - Green, Red, false
+  - Green, Red
+  - Redacted, Strikethrough, false, true
 peaceful_radius: 20
 peaceful_interval: 100
