@@ -1,5 +1,7 @@
 package me.priceconnelly.pctweaks;
 
+import me.priceconnelly.pctweaks.commands.*;
+import me.priceconnelly.pctweaks.listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.plugin.java.JavaPlugin;
