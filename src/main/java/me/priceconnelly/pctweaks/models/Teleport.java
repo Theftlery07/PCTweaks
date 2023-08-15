@@ -1,5 +1,6 @@
 package me.priceconnelly.pctweaks.models;
 
+import me.priceconnelly.pctweaks.commands.BackCommand;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
@@ -19,13 +20,16 @@ public class Teleport {
     private final String id;
     private final long time;
     private final long MAX_TIME = 10000;
-    public Teleport(Player player, Player target){
+    public enum TpType{A, R}
+    private TpType tpType;
+    public Teleport(Player player, Player target, TpType tpType){
         if(player == null) throw new NullPointerException("Player cannot be null");
         if(target == null) throw new NullPointerException("Target cannot be null");
         uuidPlayer = player.getUniqueId();
         uuidTarget = target.getUniqueId();
         id = UUID.randomUUID().toString();
         time = System.currentTimeMillis();
+        this.tpType = tpType;
         teleports.add(this);
         target.sendMessage(player.getDisplayName() + " offers a teleport");
         target.spigot().sendMessage(getTeleportMessage());
@@ -44,8 +48,16 @@ public class Teleport {
         }
         teleports.remove(this);
         //TODO: Add no damage ticks to prevent too much trolling
-        target.setNoDamageTicks(100);
-        target.teleport(player);
+        if(tpType == TpType.A){
+//            BackCommand.setLastLocation(target);
+            target.setNoDamageTicks(100);
+            target.teleport(player);
+        } else if (tpType == TpType.R){
+//            BackCommand.setLastLocation(player);
+            player.setNoDamageTicks(100);
+            player.teleport(target);
+        }
+        //TODO: Fix these messages
         player.sendMessage("Teleport" + ChatColor.GREEN + " accepted");
         player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + target.getDisplayName() + ChatColor.RED + " accepted the teleport");
     }

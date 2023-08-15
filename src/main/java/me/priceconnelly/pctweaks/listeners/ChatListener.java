@@ -13,7 +13,8 @@ public class ChatListener implements Listener {
 //            TextComponent text = new TextComponent(e.getPlayer().getDisplayName() + ": " + e.getMessage());
 //            if(!e.getPlayer().isOp()) text.setColor(ChatColor.DARK_GRAY);
 //            e.getPlayer().chat(text.toString());
-            if(!e.getPlayer().isOp()) e.setMessage(ChatColor.DARK_GRAY + e.getMessage());
+
+//            if(!e.getPlayer().isOp()) e.setMessage(ChatColor.DARK_GRAY + e.getMessage());
         }
     }
 }

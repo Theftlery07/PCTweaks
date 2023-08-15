@@ -9,7 +9,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class TeleportCommand implements CommandExecutor {
+public class TeleportRCommand implements CommandExecutor {
     private static final Cooldown cooldown = new Cooldown(5);
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -31,7 +31,7 @@ public class TeleportCommand implements CommandExecutor {
             return true;
         }
         if(!player.isOp() && cooldown.onCooldown(player)) return true;
-        new Teleport(player, target);
+        new Teleport(player, target, Teleport.TpType.R);
         return true;
     }
 }

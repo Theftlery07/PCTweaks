@@ -52,7 +52,8 @@ public final class PCTweaks extends JavaPlugin {
         getCommand("rank").setExecutor(new RankCommand());
         // Teleport
         //TODO: Can probably compress this too
-        getCommand("tpa").setExecutor(new TeleportCommand());
+        getCommand("tpa").setExecutor(new TeleportACommand());
+        getCommand("tpr").setExecutor(new TeleportRCommand());
         getCommand("acceptTP").setExecutor(new AcceptTPCommand());
         getCommand("rejectTP").setExecutor(new RejectTPCommand());
         // Sheep
@@ -73,6 +74,8 @@ public final class PCTweaks extends JavaPlugin {
         // Death Counter
         getCommand("deaths").setExecutor(new DeathsCommand());
         getServer().getPluginManager().registerEvents(new PlayerDeathListener(), this);
+        // Back
+        getCommand("back").setExecutor(new BackCommand());
     }
     @Override
     public void onDisable() {

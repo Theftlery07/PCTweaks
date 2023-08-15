@@ -146,7 +146,11 @@ public class Request {
             ItemMeta itemMeta = item.getItemMeta();
             List<String> lore = new LinkedList<String>();
             lore.add(ChatColor.GREEN + "[LMB]" + ChatColor.RED + "   [RMB]");
-            lore.add(ChatColor.RESET + "Player: " + ChatColor.GOLD + request.getPlayer().getDisplayName());
+            if(request.getPlayer() != null){
+                lore.add(ChatColor.RESET + "Player: " + ChatColor.GOLD + request.getPlayer().getDisplayName());
+            } else {
+                lore.add(ChatColor.RED + "Player is not Online");
+            }
             lore.add(ChatColor.RESET + "Count: " + ChatColor.GOLD + request.getItem().getAmount());
             lore.add(ChatColor.DARK_GRAY + "ID: " + request.getId());
             itemMeta.setLore(lore);

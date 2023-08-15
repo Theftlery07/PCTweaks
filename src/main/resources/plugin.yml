@@ -61,6 +61,9 @@ commands:
   tpa:
     description: teleport anyone
     usage: /<command>
+  tpr:
+    description: teleport everyone else
+    usage: /<command>
   break:
     description: Timed server closing
     usage: /<command>
@@ -77,4 +80,7 @@ commands:
     usage: /<command>
   deaths:
     description: count how many times you've died
+    usage: /<command>
+  back:
+    description: backs you back to your last back
     usage: /<command>
