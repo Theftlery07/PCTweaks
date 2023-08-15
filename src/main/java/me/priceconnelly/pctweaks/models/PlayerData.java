@@ -8,6 +8,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.UUID;
 
 import static me.priceconnelly.pctweaks.PCTweaks.getPlugin;
 
@@ -30,6 +31,7 @@ public class PlayerData {
     private int deaths = 0;
     private boolean peaceful = false;
     private boolean pvp = false;
+    private List<UUID> trustedPlayers = new ArrayList<>();
 
     private static HashMap<String, PlayerData> initData(){
         return new HashMap<>();
@@ -42,6 +44,7 @@ public class PlayerData {
         return playerDatas.get(uuid);
     }
     public static void saveData() throws IOException {
+        System.out.println("Saving Player Data");
         Gson gson = new Gson();
         File file = new File(getPlugin().getDataFolder().getAbsoluteFile() + "/playerData.json");
         file.getParentFile().mkdir();
@@ -50,6 +53,7 @@ public class PlayerData {
         gson.toJson(playerDatas, writer);
         writer.flush();
         writer.close();
+        System.out.println("Saved Player Data");
     }
     public static HashMap<String, PlayerData> loadData() throws IOException {
         Gson gson = new Gson();
@@ -98,5 +102,24 @@ public class PlayerData {
     }
     public void setPeaceful(boolean peaceful) {
         this.peaceful = peaceful;
+    }
+    public UUID[] getTrustedPlayers(){
+        return trustedPlayers.toArray(new UUID[0]);
+    }
+    public boolean addTrustedPlayer(Player player){
+        if(trustedPlayers.contains(player.getUniqueId())) return false;
+        trustedPlayers.add(player.getUniqueId());
+        return true;
+    }
+    public boolean removeTrustedPlayer(Player player){
+        if(!trustedPlayers.contains(player.getUniqueId())) return false;
+        trustedPlayers.add(player.getUniqueId());
+        return true;
+    }
+    public void clearTrustedPlayers(){
+        trustedPlayers.clear();
+    }
+    public boolean isTrusted(Player player){
+        return trustedPlayers.contains(player.getUniqueId());
     }
 }

@@ -56,6 +56,7 @@ public final class PCTweaks extends JavaPlugin {
         getCommand("tpr").setExecutor(new TeleportRCommand());
         getCommand("acceptTP").setExecutor(new AcceptTPCommand());
         getCommand("rejectTP").setExecutor(new RejectTPCommand());
+        getServer().getPluginManager().registerEvents(new PlayerTeleportListener(), this);
         // Sheep
         getCommand("sheep").setExecutor(new SheepCommand());
         // Pvp
@@ -76,6 +77,16 @@ public final class PCTweaks extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerDeathListener(), this);
         // Back
         getCommand("back").setExecutor(new BackCommand());
+        // Trust
+        getCommand("trust").setExecutor(new TrustCommand());
+        // Player Data
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, () -> {
+            try {
+                PlayerData.saveData();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }, 6000, 6000);
     }
     @Override
     public void onDisable() {

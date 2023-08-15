@@ -31,6 +31,9 @@ public class Teleport {
         time = System.currentTimeMillis();
         this.tpType = tpType;
         teleports.add(this);
+        if(tpType == TpType.R && PlayerData.getPlayerData(target).isTrusted(player)){
+            acceptTeleport();
+        }
         target.sendMessage(player.getDisplayName() + " offers a teleport");
         target.spigot().sendMessage(getTeleportMessage());
     }

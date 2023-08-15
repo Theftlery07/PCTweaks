@@ -84,3 +84,6 @@ commands:
   back:
     description: backs you back to your last back
     usage: /<command>
+  trust:
+    description: yeah I trust you
+    usage: /<command>
