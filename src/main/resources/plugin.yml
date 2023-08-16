@@ -81,6 +81,9 @@ commands:
   deaths:
     description: count how many times you've died
     usage: /<command>
+  death:
+    description: funny death messages
+    usage: /<command>
   back:
     description: backs you back to your last back
     usage: /<command>

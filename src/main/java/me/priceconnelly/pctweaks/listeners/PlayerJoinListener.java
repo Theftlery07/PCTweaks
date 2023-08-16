@@ -11,6 +11,10 @@ public class PlayerJoinListener implements Listener {
     public void onPlayerJoin(PlayerJoinEvent e){
         Player player = e.getPlayer();
         Rank.update(player);
-        e.setJoinMessage("Welcome " + player.getDisplayName());
+        if(!player.hasPlayedBefore()){
+            e.setJoinMessage("Welcome " + player.getDisplayName());
+        } else {
+            e.setJoinMessage(player.getDisplayName() + " came back from the moooooooooooon!");
+        }
     }
 }

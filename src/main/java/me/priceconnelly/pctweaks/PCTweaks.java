@@ -72,9 +72,11 @@ public final class PCTweaks extends JavaPlugin {
         getCommand("nickname").setExecutor(new NicknameCommand());
         // HCF
         getCommand("hcf").setExecutor(new HCFCommand());
-        // Death Counter
+        // Death
         getCommand("deaths").setExecutor(new DeathsCommand());
         getServer().getPluginManager().registerEvents(new PlayerDeathListener(), this);
+        //Death 2
+        getCommand("death").setExecutor(new DeathCommand());
         // Back
         getCommand("back").setExecutor(new BackCommand());
         // Trust

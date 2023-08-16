@@ -10,3 +10,5 @@ ranks:
   - Redacted, Strikethrough, false, true
 peaceful_radius: 20
 peaceful_interval: 100
+death_messages:
+  - Ow
